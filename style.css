@@ -347,7 +347,14 @@ p{
         justify-content: end;
     }
 }
-
+.profile-img {
+        width: 26vh;
+        height: 26vh;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 0px;
+        border: 3px solid #4f5154;
+    }
 @media (max-width: 1100px) {
     .nav-menu {
         position: fixed;
@@ -387,14 +394,7 @@ p{
         float: left;
         display: contents;
     }
-    .profile-img {
-        width: 26vh;
-        height: 26vh;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 0px;
-        border: 3px solid #4f5154;
-    }
+    
     .sidebar-name {
         margin-bottom: 0px;
     }
