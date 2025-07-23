@@ -55,8 +55,8 @@ body {
     padding-right: 30px;
 }
 .profile-img {
-    width: 30vh;
-    height: 30vh;
+    width: 26vh;
+    height: 26vh;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
