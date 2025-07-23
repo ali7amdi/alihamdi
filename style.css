@@ -86,6 +86,7 @@ body {
     list-style: none;
     padding: 0;
     margin-top: 10px;
+    height: -webkit-fill-available;
 }
 
 .sidebar-links li {
@@ -225,33 +226,6 @@ li {
     background-color: #1a5cb0;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding-right: 0;
-        border-right: none;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        position: relative;
-        width: 100%;
-        left: 0;
-        padding-top: 0;
-        right: 0;
-        background: none;
-        height: auto;
-        z-index: 1;
-    }
-
-    .main-content {
-        padding-left: 0;
-        margin-left: 0;
-    }
-}
 
 /* Add this to your existing styles.css */
 .navbar {
@@ -320,17 +294,67 @@ li {
     text-decoration: none;
 }
 
-@media (min-width:1100px){
-    .nav-logo {
-        display: block;
+
+p{
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+.tabs{
+    margin-bottom: 20px;
+}
+.tabs span {
+    padding: 5px;
+    display: inline-flex;
+    border: 1px solid #818080;
+    border-radius: 5px;
+    color: #818080;
+    cursor: pointer;
+    font-size: 14px;
+}
+.tabs span:hover, .tabs span.active{
+    padding: 5px;
+    display: inline-flex;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #333;
+}
+.tap-section{
+    display: none;
+}
+.tap-section.show{
+    display: block;
+}
+.nav-logo {
+    display: none;
+}
+
+.nav-logo img {
+    width: 30px;
+}
+@media (min-width:768px) and (max-height: 1100px) {
+    .scrollable{
+        height: 60vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .nav-menu.active {
+        right: 0;
+        left: auto;
+        background-image: linear-gradient(#164278, #49678c, #164278);
+    }
+    .nav-container {
+        justify-content: end;
     }
 }
+
 @media (max-width: 1100px) {
     .nav-menu {
         position: fixed;
         top: 50px;
         left: -100%;
-        background-color: #ebebeb;
+        background-color: #164278;
+        background-image: linear-gradient(#164278, #255590, #164278);
         width: 250px;
         flex-direction: column;
         align-items: center;
@@ -349,15 +373,7 @@ li {
     .nav-toggle {
         display: block;
     }
-    .nav-logo {
-        color: #000000;
-        font-weight: bold;
-        font-size: 2rem;
-        text-decoration: none;
-        width: 250px;
-        text-align: center;
-        display: block;
-    }
+
     .nav-container{
         height: 50px;
     }
@@ -369,6 +385,7 @@ li {
         margin-bottom: 0px;
         width: 50%;
         float: left;
+        display: contents;
     }
     .profile-img {
         width: 26vh;
@@ -413,38 +430,71 @@ li {
         padding-top: 8px;
     }
 }
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-left: 0%;
+        overflow-x: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 
-p{
-    margin: 5px 0;
-    font-size: 14px;
-    font-family: sans-serif;
-}
-.tabs{
-    margin-bottom: 20px;
-}
-.tabs span {
-    padding: 5px;
-    display: inline-flex;
-    border: 1px solid #818080;
-    border-radius: 5px;
-    color: #818080;
-    cursor: pointer;
-    font-size: 14px;
-}
-.tabs span:hover, .tabs span.active{
-    padding: 5px;
-    display: inline-flex;
-    border: 1px solid #333;
-    border-radius: 5px;
-    color: #333;
-}
-.tap-section{
-    display: none;
-}
-.tap-section.show{
-    display: block;
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 10px;
+        position: relative;
+        left: 0;
+        padding: 0;
+        right: 0;
+        background: none;
+        height: auto;
+        z-index: 1;
+    }
+
+    .main-content {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .sidebar-links li {
+        width: 50%;
+        float: left;
+        display: block;
+    }
+    .sidebar-title {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .nav-logo {
+        font-size: 1.5rem;
+        display: flex;
+        gap: 10px;
+    }
+    .sm-hidden{
+        display: none;
+    }
 }
 
-.scrollable{
-    height: 50vh;
+@media (max-width: 410px) {
+    .sidebar-links li {
+        width: 100%;
+        float: left;
+        display: block;
+    }
+    .tabs span {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 14px;
+        margin: 10px 0 5px 0;
+    }
+    li {
+        margin-bottom: 0px;
+        font-size: 12px;
+    }
 }
