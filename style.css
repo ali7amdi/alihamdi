@@ -273,6 +273,9 @@ li {
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.3s;
+    height: 50px;
+    display: inline-block;
+    line-height: 50px;
 }
 
 .nav-link:hover,.nav-link.active {
