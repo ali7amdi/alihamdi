@@ -83,10 +83,11 @@ body {
 }
 
 .sidebar-links {
-    list-style: none;
+     list-style: none;
     padding: 0;
     margin-top: 10px;
-    height: -webkit-fill-available;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .sidebar-links li {
